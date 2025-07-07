@@ -1,0 +1,1 @@
+["baddns","shodan_idb","nuclei",'pgp']
