@@ -1,5 +1,6 @@
 # BBOT_Automation
 Automatização do uso do BigHuge Black lantern security OSINT Tool.
+O objetivo desse código é automatizar o uso do BBOT, sem mais uso de comandos gigantescos, tudo que você precisa fazer é escolher o tipo de scan que quer rodar, o alvo e o nome do arquivo, PUM!
 Foram criados vários tipos de perfis de scan para diferentes propósitos:
 1. scan_dataleak_treatment: Scan de exploração de bases de dados buscando vazamentos de senhas. (output tratado com pandas)
 2. scan_domain_treatment: Scan de exploração profunda de domínios. (output tratado com pandas)
