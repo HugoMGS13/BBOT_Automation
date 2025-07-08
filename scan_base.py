@@ -106,14 +106,18 @@ class PerfilDeScanBase(abc.ABC):
 
             nome_arquivo = f'{self.output_filename}.xlsx'
 
+            nome_arquivo_json = f'{self.output_filename}.json'
+
             print("\n--- DataFrame Final e Tratado ---\n")
             print(df_tratado)
 
-            #Com o DataFrame filtrado, nós exportamos para uma pasta destino
+            #Com o DataFrame filtrado, nós exportamos para uma pasta em formato xlsx
             try:
-                df_tratado.to_excel(f'/home/teste/Documentos/projetos/scans/{nome_arquivo}')
+                df_tratado.to_excel(f'/home/teste/Documentos/projetos/scans_xlsx/{nome_arquivo}')
+                df_tratado.to_json(f'/home/teste/Documentos/projetos/scans_json/{nome_arquivo_json}', orient='records', indent=4)
             except Exception as e:
                 print(f"ERRO ao exportar para Excel: {e}")
+                print(f"ERRO ao exportar para JSON: {e}")
                 
         else:
             print("\nERRO: Nenhuma das colunas desejadas foi encontrada no DataFrame original.")
