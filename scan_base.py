@@ -102,16 +102,16 @@ class PerfilDeScanBase(abc.ABC):
         if colunas_finais:
             
             # Criamos o novo DataFrame usando a lista de colunas válidas
-            df_tratado = df_bruto[colunas_finais]
+            df_tratado = df_bruto[colunas_finais].fillna("No Info")
 
             nome_arquivo = f'{self.output_filename}.xlsx'
 
             print("\n--- DataFrame Final e Tratado ---\n")
             print(df_tratado)
 
-            #Com o DataFrame filtrado, nós exportamos para uma pasta em formato xlsx
+            #Com o DataFrame filtrado, nós exportamos para uma pasta destino
             try:
-                df_tratado.to_excel(f'/home/sec/Documentos/projetoBBOT/scans/{nome_arquivo}')
+                df_tratado.to_excel(f'/home/teste/Documentos/projetos/scans/{nome_arquivo}')
             except Exception as e:
                 print(f"ERRO ao exportar para Excel: {e}")
                 
