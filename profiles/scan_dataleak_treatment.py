@@ -2,7 +2,7 @@ from scan_base import PerfilDeScanBase
 
 class PerfilDataLeak(PerfilDeScanBase):
     name = "scan_dataleak_treatment"
-    description = "Scan de exploração de bases de dados buscando de vazamentos de senhas"
+    description = "Scan de exploração de bases de dados buscando vazamentos de senhas"
     modules = ["baddns","dehashed",'pgp']
     config = {
         "modules": {
