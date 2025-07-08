@@ -8,3 +8,5 @@ Foram criados vários tipos de perfis de scan para diferentes propósitos:
 É possível criar ou modificar os perfis na pasta "profiles".
 
 Adicione sua própria pasta destino para armazenar os resultados dos scans, que vêm em .xlsx, no arquivo scan_base.py.
+
+!Os outputs continuam sendo salvos na pasta padrão do BBOT!
